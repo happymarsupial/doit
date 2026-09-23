@@ -1,0 +1,26 @@
+# Node
+node_modules
+dist
+dist-ssr
+*.local
+
+# Rust
+/target/
+apps/*/src-tauri/target/
+
+# Tauri generated
+apps/*/src-tauri/gen/schemas
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.sw?

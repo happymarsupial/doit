@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <clipPath id="squircle"><rect x="0" y="0" width="1024" height="1024" rx="228" ry="228"/></clipPath>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E86FF"/>
+      <stop offset="55%" stop-color="#4F6DF5"/>
+      <stop offset="100%" stop-color="#2F45B8"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="26"/></filter>
+  </defs>
+
+  <g clip-path="url(#squircle)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+    <ellipse cx="512" cy="120" rx="520" ry="320" fill="url(#gloss)" filter="url(#soft)"/>
+
+    <!-- lowercase "d": bowl ring (evenodd hole) fused with stem -->
+    <path fill="#FFFFFF" fill-rule="evenodd"
+          d="M 285,610 A175,175 0 1,0 635,610 A175,175 0 1,0 285,610 Z
+             M 365,610 A95,95 0 1,0 555,610 A95,95 0 1,0 365,610 Z"/>
+    <rect x="600" y="235" width="80" height="550" rx="40" fill="#FFFFFF"/>
+  </g>
+</svg>

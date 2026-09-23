@@ -1,0 +1,12 @@
+{
+  "name": "doit",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "pnpm --filter @doit/desktop tauri dev",
+    "build": "pnpm --filter @doit/desktop tauri build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
