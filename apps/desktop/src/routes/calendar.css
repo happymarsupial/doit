@@ -1,0 +1,227 @@
+.calendar-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.calendar-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-view-switch {
+  display: flex;
+  background: var(--color-border);
+  border-radius: 999px;
+  padding: 2px;
+  margin-right: 6px;
+}
+
+.calendar-view-switch button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.calendar-view-switch button.active {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  padding: 0 4px;
+}
+
+.calendar-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 6px;
+}
+
+.calendar-cell {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 88px;
+  background: var(--color-surface);
+}
+
+.calendar-cell.muted {
+  opacity: 0.45;
+}
+
+.calendar-cell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-day-number {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.calendar-day-number.today {
+  color: white;
+  background: var(--color-accent);
+  border-radius: 999px;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-events {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+}
+
+.calendar-event-pill {
+  border: none;
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: white;
+  font-size: 0.72rem;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.timegrid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.timegrid-header {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 2;
+}
+
+.timegrid-gutter {
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.timegrid-day-header {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timegrid-weekday {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.timegrid-daynum {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.timegrid-daynum.today {
+  color: var(--color-accent);
+}
+
+.timegrid-body {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.timegrid-hour-label {
+  height: 48px;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-align: right;
+  padding-right: 6px;
+  box-sizing: border-box;
+  transform: translateY(-7px);
+}
+
+.timegrid-day-column {
+  flex: 1;
+  position: relative;
+  border-left: 1px solid var(--color-border);
+}
+
+.timegrid-hour-slot {
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.timegrid-hour-slot:hover {
+  background: rgba(127, 127, 127, 0.08);
+}
+
+.timegrid-event {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.72rem;
+  text-align: left;
+  padding: 2px 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.timegrid-allday-pill {
+  display: block;
+  margin: 2px 4px;
+  border: none;
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: white;
+  font-size: 0.72rem;
+  cursor: pointer;
+  text-align: left;
+}

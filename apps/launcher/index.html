@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>doit</title>
+  </head>
+  <body>
+    <div class="titlebar" data-tauri-drag-region>
+      <span data-tauri-drag-region>doit</span>
+      <button id="close-btn" aria-label="Cerrar">✕</button>
+    </div>
+
+    <main id="app">
+      <div class="brand-mark"></div>
+
+      <form id="login-form" class="screen">
+        <h1>Iniciar sesión</h1>
+        <p class="hint">Necesitás una cuenta en la web para descargar doit.</p>
+        <label>
+          Email
+          <input id="email" type="email" required autocomplete="username" />
+        </label>
+        <label>
+          Contraseña
+          <input id="password" type="password" required autocomplete="current-password" />
+        </label>
+        <p id="login-error" class="error" hidden></p>
+        <button type="submit" class="primary">Entrar</button>
+      </form>
+
+      <div id="account-screen" class="screen" hidden>
+        <h1 id="account-name">Hola</h1>
+        <p id="account-plan" class="hint"></p>
+        <button id="download-btn" class="primary">Descargar / actualizar doit</button>
+        <button id="logout-btn" class="ghost">Cerrar sesión</button>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

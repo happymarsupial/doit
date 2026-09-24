@@ -3,6 +3,13 @@ node_modules
 dist
 dist-ssr
 *.local
+apps/vscode-timer/out
+*.vsix
+
+# Web (PHP site secrets/build output)
+web/config.local.php
+web/downloads/*
+!web/downloads/.gitkeep
 
 # Rust
 /target/

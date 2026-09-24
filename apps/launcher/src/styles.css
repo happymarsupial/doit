@@ -1,0 +1,174 @@
+:root {
+  --color-bg: rgba(244, 244, 246, 0.82);
+  --color-surface: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-text: #1c1c1e;
+  --color-text-muted: #6b6b70;
+  --color-accent: #4f6df5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: rgba(28, 28, 30, 0.82);
+    --color-surface: rgba(44, 44, 46, 0.7);
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-text: #f5f5f7;
+    --color-text-muted: #a1a1a6;
+    --color-accent: #7c93ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.titlebar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 0 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.titlebar button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  width: 26px;
+  height: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.titlebar button:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 32px 32px;
+  height: calc(100% - 34px);
+}
+
+.brand-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6e86ff, var(--color-accent) 55%, #2f45b8);
+  margin: 8px 0 22px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 14px 17px 14px auto;
+  width: 12px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 30px;
+  bottom: 14px;
+  height: 20px;
+  border: 6px solid #fff;
+  border-radius: 999px 999px 0 0 / 20px 20px 0 0;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.screen h1 {
+  font-size: 1.3rem;
+  margin: 0 0 4px;
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  margin: 0 0 18px;
+}
+
+.screen label {
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.screen input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.screen input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+button.primary,
+button.ghost {
+  width: 100%;
+  font: inherit;
+  font-weight: 600;
+  padding: 11px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+button.primary {
+  border: none;
+  background: var(--color-accent);
+  color: white;
+}
+
+button.ghost {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.error {
+  color: #d15b5b;
+  font-size: 0.82rem;
+  margin: 4px 0 0;
+}

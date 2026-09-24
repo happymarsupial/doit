@@ -1,0 +1,265 @@
+.finance-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 640px;
+}
+
+.finance-accounts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.finance-account-card {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+.finance-account-name {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.finance-account-balance {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.ds-toggle button.active.income {
+  background: #2e9e5b;
+  color: white;
+  border-color: #2e9e5b;
+}
+
+.ds-toggle button.active.expense {
+  background: #d15b5b;
+  color: white;
+  border-color: #d15b5b;
+}
+
+.finance-transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.finance-transaction-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.finance-transaction-badge {
+  font-weight: 700;
+  min-width: 90px;
+}
+
+.finance-transaction-badge.expense {
+  color: #d15b5b;
+}
+
+.finance-transaction-badge.income,
+.finance-transaction-badge.sale,
+.finance-transaction-badge.debt_payment {
+  color: #2e9e5b;
+}
+
+.finance-transaction-note {
+  flex: 1;
+  color: var(--color-text-muted);
+}
+
+.finance-transaction-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.finance-debtors {
+  display: flex;
+  gap: 20px;
+  max-width: none;
+}
+
+.finance-debtor-list {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.finance-debtor-list h2 {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+
+.finance-debtor-item {
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.finance-debtor-item:hover {
+  background: var(--color-border);
+}
+
+.finance-debtor-item.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.finance-new-debtor {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.finance-debtor-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.finance-debts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finance-debt-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.finance-debt-status {
+  margin-left: 10px;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-border);
+}
+
+.finance-debt-status.paid {
+  background: #2e9e5b;
+  color: white;
+}
+
+.finance-debt-status.partial {
+  background: #d19b3b;
+  color: white;
+}
+
+.finance-recurring {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finance-recurring-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finance-recurring-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.finance-recurring-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.finance-recurring-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.finance-recurring-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.finance-day-field select {
+  width: auto;
+}
+
+.finance-day-hint {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.finance-debtors-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 6px;
+}
+
+.finance-debtors-total span {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.finance-debtors-total strong {
+  font-size: 1.2rem;
+}
+
+.finance-debtor-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finance-debtor-item-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.finance-debtor-item-balance {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.finance-debtor-item.active .finance-debtor-item-balance {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.finance-debt-card.overdue {
+  border: 1px solid #d15b5b;
+}
+
+.finance-debt-status.overdue {
+  background: #d15b5b;
+  color: white;
+}

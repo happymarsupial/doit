@@ -1,0 +1,180 @@
+.freelance-page {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+
+.freelance-client-list {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.freelance-client-list h2 {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+
+.freelance-client-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 7px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 0.86rem;
+}
+
+.freelance-client-item:hover {
+  background: var(--color-border);
+}
+
+.freelance-client-item.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.freelance-client-badge {
+  font-size: 0.68rem;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.freelance-client-item.active .freelance-client-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.freelance-new-client {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.freelance-project-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 560px;
+}
+
+.freelance-client-contact {
+  margin: -8px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.freelance-project-form {
+  flex-wrap: wrap;
+}
+
+.freelance-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.freelance-project-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.freelance-project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.freelance-project-info span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.freelance-project-status {
+  font-size: 0.7rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.freelance-project-status.active {
+  background: #2e9e5b;
+  color: white;
+}
+
+.freelance-project-status.done {
+  background: var(--color-accent);
+  color: white;
+}
+
+.freelance-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.freelance-detail-header h1 {
+  margin: 0;
+}
+
+.freelance-unbilled {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+}
+
+.freelance-unbilled strong {
+  font-size: 1.3rem;
+}
+
+.freelance-time-entries,
+.freelance-invoices {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.freelance-time-row,
+.freelance-invoice-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.freelance-time-row-desc {
+  flex: 1;
+  color: var(--color-text-muted);
+}
+
+.freelance-invoice-status {
+  font-size: 0.7rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--color-border);
+  text-transform: capitalize;
+}
+
+.freelance-invoice-status.paid {
+  background: #2e9e5b;
+  color: white;
+}

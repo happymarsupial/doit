@@ -1,0 +1,64 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 480px;
+}
+
+.settings-page h1 {
+  margin: 0;
+}
+
+.settings-page h2 {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0 0 10px;
+}
+
+.settings-theme-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.settings-theme-chip {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 6px 16px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-theme-chip.active {
+  border-color: var(--color-text);
+}
+
+.settings-editor {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-mode-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.settings-mode-toggle button {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  cursor: pointer;
+}
+
+.settings-mode-toggle button.active {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}

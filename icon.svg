@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g stroke="#0A0A0A" stroke-width="58" stroke-linecap="round"
+     stroke-linejoin="round" fill="none">
+    <!-- B -->
+    <path d="M90 95 V417"/>
+    <path d="M90 95 H193 a74 74 0 0 1 0 148 H90"/>
+    <path d="M90 243 H207 a87 87 0 0 1 0 174 H90"/>
+    <!-- S que sale de la B -->
+    <path d="M425 170
+             C 425 118 375 94 331 113
+             C 291 130 287 182 327 208
+             L 367 232
+             C 407 258 407 322 367 348
+             C 327 374 281 360 269 320"/>
+  </g>
+</svg>
